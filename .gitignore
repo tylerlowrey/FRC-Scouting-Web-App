@@ -1,6 +1,4 @@
-#Ignore application.properties because it has username and password for Postgres
-src/main/resources/application.properties
-application.properties
+
 
 HELP.md
 .gradle
@@ -8,6 +6,9 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**
 !**/src/test/**
+
+#Ignore application.properties because it has username and password for Postgres
+application.properties
 
 ### STS ###
 .apt_generated
