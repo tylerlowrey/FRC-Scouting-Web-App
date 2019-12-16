@@ -6,6 +6,9 @@ import javax.persistence.*;
 public class RoboticsEvent
 {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "event_id")
+    private Long eventID;
     @Column(name = "event_key")
     private String eventKey;
     @Column(name = "event_name")
@@ -18,6 +21,16 @@ public class RoboticsEvent
     public RoboticsEvent()
     {
 
+    }
+
+    public Long getEventID()
+    {
+        return eventID;
+    }
+
+    public void setEventID(Long eventID)
+    {
+        this.eventID = eventID;
     }
 
     public String getEventKey()

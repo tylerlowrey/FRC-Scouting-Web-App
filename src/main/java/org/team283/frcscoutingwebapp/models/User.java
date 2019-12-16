@@ -1,9 +1,12 @@
 package org.team283.frcscoutingwebapp.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity(name = "users")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler" })
 public class User
 {
     @Id
