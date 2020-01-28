@@ -1,5 +1,7 @@
 package org.team283.scoutingwebapp.models;
 
+import org.springframework.data.rest.core.annotation.RestResource;
+
 import javax.persistence.*;
 
 @Entity
@@ -18,6 +20,7 @@ public class User
     private String username;
 
     @Column(nullable = false)
+    @RestResource(exported = false)
     private String password;
 
     @Column(nullable = false)
