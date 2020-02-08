@@ -1,0 +1,1 @@
+export const SERVER_API_URL = "http://server.team283.org/api/v1";

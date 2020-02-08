@@ -1,0 +1,63 @@
+.header
+{
+    max-width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    flex-shrink: 0;
+    background: #000;
+    padding: 5px 18px;
+    height: 70px;
+}
+
+.logo-image
+{
+    max-width: 60px;
+    max-height: 60px;
+    flex-grow: 1;
+}
+
+.logo-text
+{
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #FFF;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: condensed;
+    flex-grow: 8;
+
+}
+
+.logo-text-with-search-bar
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.navigation-hamburger-icon
+{
+    margin-left: 10px;
+}
+
+.navigation-hamburger-icon img
+{
+    max-width: 35px;
+    max-height: 35px;
+}
+
+.navigation-hamburger-icon img:hover
+{
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px)
+{
+    .logo-text-with-search-bar
+    {
+        visibility: hidden;
+    }
+}

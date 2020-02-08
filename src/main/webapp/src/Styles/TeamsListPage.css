@@ -1,0 +1,76 @@
+.scouting-data-table
+{
+    border: 1px #CCC solid;
+    border-radius: 8px;
+    border-collapse: initial;
+    max-width: 80%;
+    display: block;
+    margin: 60px auto;
+    /*height: 200px; TODO: Remove this */
+}
+
+
+.scouting-data-table-header
+{
+    background: #E3E3E3;
+    color: #000;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px #BDBDBD solid;
+    font-weight: bold;
+}
+
+.scouting-data-row
+{
+    background: #FFF;
+    color: #000;
+    display: flex;
+    width: 100%;
+    height: 45px;
+    border-bottom: 1px #CCC solid;
+}
+
+.scouting-data-row:last-child
+{
+    border-bottom: none;
+    border-radius: 0 0 8px 8px;
+}
+
+.scouting-data-cell
+{
+    border-right: 1px #CCCCCC solid;
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 10px;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    flex-grow: 1;
+    width: 25%;
+    /* Prevent text from flowing into other cells when compacted*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.scouting-data-table-header .scouting-data-cell
+{
+    height: 50px;
+    line-height: 50px;
+}
+
+.scouting-data-cell:last-child
+{
+    border-right: none;
+}
+
+@media only screen and (max-width: 720px)
+{
+    .scouting-data-table
+    {
+        max-width: 95%;
+    }
+}

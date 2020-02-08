@@ -1,6 +1,7 @@
 package org.team283.scoutingwebapp;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -24,6 +25,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
     @Autowired
     private UserDetailsServiceImpl userDetailsService;
 
+    @Value("${spring.data.rest.base-path}")
+    private String baseUrl;
+
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception
     {
@@ -33,24 +37,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception
     {
-        /*
-        http.csrf().disable().cors().and().authorizeRequests()
-                .antMatchers(HttpMethod.POST, "/login").permitAll()
-                .anyRequest().authenticated()
-                .and()
-                // Filter for the api/login requests
-                .addFilterBefore(new LoginFilter("/login",
-                                                 authenticationManager()),
-                                 UsernamePasswordAuthenticationFilter.class)
-                // Filter for other requests to check JWT in header
-                .addFilterBefore(new AuthenticationFilter(),
-                                 UsernamePasswordAuthenticationFilter.class); */
-
-        httpSecurity.csrf().disable().cors().and().authorizeRequests().antMatchers(HttpMethod.POST, "/login")
+        httpSecurity.csrf().disable().cors().and().authorizeRequests().antMatchers(HttpMethod.POST, baseUrl + "/login")
                 .permitAll().anyRequest().authenticated().and()
-                .addFilterBefore(new LoginFilter("/login", authenticationManager()), UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(new LoginFilter(baseUrl + "/login", authenticationManager()), UsernamePasswordAuthenticationFilter.class)
                 .addFilterBefore(new AuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
-
     }
 
     @Bean

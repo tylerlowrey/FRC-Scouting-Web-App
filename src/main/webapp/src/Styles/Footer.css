@@ -1,0 +1,14 @@
+footer
+{
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.footer-text
+{
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}

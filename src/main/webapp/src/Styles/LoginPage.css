@@ -1,0 +1,132 @@
+.login-page-background
+{
+    background-image: url("/images/login_background_tile.png");
+}
+
+.login-error-message
+{
+    width: 350px;
+    max-width: 90%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+}
+.login-error-message p
+{
+    margin: 0 10px 0 0;
+}
+
+.login-page-transparent-bg-cover
+{
+    width: 100%;
+    height: 100%;
+    background: rgba(204, 204, 204, .96);
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.login-header
+{
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    align-items: center;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.login-header-text
+{
+    font-size: 24px;
+    color: #000;
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-stretch: condensed;
+}
+
+.login-wrapper
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box
+{
+    width: 450px;
+    height: 360px;
+    max-width: 90%;
+    margin: 30px auto;
+    border-radius: 6px;
+    background: #EBE8E8; /*#E3E3E3; */
+    border: 1px #707070 solid;
+}
+
+.login-box form
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box form label
+{
+    font-size: 20px;
+    color: #707070;
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.login-box form input:first-of-type
+{
+    margin-bottom: 20px;
+}
+
+.login-box form input[type="text"], input[type="password"]
+{
+    display: block;
+    width: 90%;
+    border-radius: 4px;
+    border: 1px #707070 solid;
+    font-size: 34px;
+    padding: 5px 7px;
+}
+
+.login-box form input[type="text"]:focus, input[type="password"]:focus
+{
+    outline: none;
+    border: 1px #0066ff solid;
+    box-shadow: 0 0 4px #0066ff;
+}
+
+.login-box form input[type="submit"]
+{
+    background: #C50A0A;
+    color: #FFF;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 8px 20px 10px 20px;
+    width: 50%;
+    min-width: 100px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 50px;
+    height: 55px;
+}
+
+.login-box form input[type="submit"]:hover
+{
+    background: #000;
+}
