@@ -1,6 +1,6 @@
 import React, {Component, useState, useEffect} from 'react';
-import { BrowserRouter, Switch, Route, Link, Redirect } from 'react-router-dom'
-import './Styles/App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import './Styles/Components/App.css';
 import TeamsListPage from './Pages/TeamsListPage';
 import LoginPage from "./Pages/LoginPage";
 import NotFoundPage from "./Pages/NotFoundPage";

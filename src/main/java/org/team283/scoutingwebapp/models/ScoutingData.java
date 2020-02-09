@@ -12,6 +12,8 @@ public class ScoutingData
 
     private String username;
     private long timestamp;
+    @Column(name = "team_key")
+    private String teamKey;
     @Column(name = "photo_filename")
     private String photoFilename;
     @Column(name = "form_type")

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {SERVER_API_URL} from '../constants';
-import '../Styles/LoginPage.css';
+import '../Styles/Pages/LoginPage.css';
 import Footer from "../Components/Footer";
 import {Redirect} from 'react-router-dom';
 import base64 from 'base-64';
@@ -34,18 +34,6 @@ const LoginPage = () => {
 
     const login = (event) => {
         event.preventDefault();
-        /*
-        console.log(`url: ${SERVER_API_URL}/login, body: ${JSON.stringify(user)}`);
-
-        fetch(`${SERVER_API_URL}/login`, {
-            method: 'POST',
-            headers: new Headers({'Content-Type' : 'application/json'}),
-            body: JSON.stringify(user)
-        }).then(response => {
-
-
-        });
-         */
 
         axios.post(`${SERVER_API_URL}/login`, JSON.stringify(user), {
                 headers: { 'Content-Type' : 'application/json'},

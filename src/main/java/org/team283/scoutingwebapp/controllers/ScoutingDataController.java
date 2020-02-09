@@ -20,6 +20,8 @@ public class ScoutingDataController
         for (ScoutingData data: scoutingData)
         {
             scoutingDataRepository.save(data);
+            String formData = data.getFormData();
+
         }
     }
 }

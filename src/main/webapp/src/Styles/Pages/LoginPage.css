@@ -66,8 +66,8 @@
     max-width: 90%;
     margin: 30px auto;
     border-radius: 6px;
-    background: #EBE8E8; /*#E3E3E3; */
-    border: 1px #707070 solid;
+    background: #FFF; /*#E3E3E3; */
+    border: 1px #D2D4D8 solid;
 }
 
 .login-box form
@@ -99,9 +99,10 @@
     display: block;
     width: 90%;
     border-radius: 4px;
-    border: 1px #707070 solid;
+    border: 1px #D2D4D8 solid;
     font-size: 34px;
     padding: 5px 7px;
+    background: #FBFBFB;
 }
 
 .login-box form input[type="text"]:focus, input[type="password"]:focus

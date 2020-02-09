@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import SideNavigation from "../Components/SideNavigation";
-import '../Styles/NotFoundPage.css'
+import '../Styles/Pages/NotFoundPage.css'
 
 const NotFoundPage = () => {
 

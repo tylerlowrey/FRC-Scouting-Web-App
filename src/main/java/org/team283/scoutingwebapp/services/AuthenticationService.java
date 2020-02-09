@@ -1,5 +1,6 @@
 package org.team283.scoutingwebapp.services;
 
+import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.JwtException;
@@ -54,7 +55,6 @@ public class AuthenticationService
                 AuthenticationService.logger.info(request.getRemoteAddr() + " caused exception: " + e.toString());
                 return null;
             }
-
 
             if(user != null)
             {

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Styles/SideNavigation.css';
+import '../Styles/Components/SideNavigation.css';
 
 const SideNavigation = ({ id = "side-navigation-menu", navItems = [], show = true }) => {
 

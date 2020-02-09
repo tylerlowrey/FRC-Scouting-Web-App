@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import SearchBar from './SearchBar';
-import '../Styles/Header.css';
+import '../Styles/Components/Header.css';
 
 const Header = ({sideNavigationID = "side-navigation-menu", hamburgerIconInitial = "/images/icons/menu.png",
                  hamburgerIconShown = "/images/icons/menu_open.png", showMenuIcon = true, showSearchBar = true}) => {
