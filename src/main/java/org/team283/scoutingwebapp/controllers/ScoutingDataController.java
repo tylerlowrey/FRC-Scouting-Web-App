@@ -21,7 +21,6 @@ public class ScoutingDataController
         {
             scoutingDataRepository.save(data);
             String formData = data.getFormData();
-
         }
     }
 }

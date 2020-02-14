@@ -5,6 +5,7 @@ import TeamsListPage from './Pages/TeamsListPage';
 import LoginPage from "./Pages/LoginPage";
 import NotFoundPage from "./Pages/NotFoundPage";
 import Authentication from './Components/Authentication';
+import TeamsPage from './Pages/TeamPage';
 
 class App extends Component {
 
@@ -21,6 +22,7 @@ class App extends Component {
                     <Switch>
                         <Route exact path="/" component={TeamsListPage} />
                         <Route path="/teams" component={TeamsListPage} />
+                        <Route path="/team" component={TeamsPage} />
                         <Route path="/login" component={LoginPage} />
                         <Route path="/logout" render={() => <Authentication logout={true} />}/>
                         <Route component={NotFoundPage} />

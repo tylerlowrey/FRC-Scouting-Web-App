@@ -3,7 +3,8 @@ import SearchBar from './SearchBar';
 import '../Styles/Components/Header.css';
 
 const Header = ({sideNavigationID = "side-navigation-menu", hamburgerIconInitial = "/images/icons/menu.png",
-                 hamburgerIconShown = "/images/icons/menu_open.png", showMenuIcon = true, showSearchBar = true}) => {
+                 hamburgerIconShown = "/images/icons/menu_open.png", showMenuIcon = true, showSearchBar = true,
+                 searchBarData = [], providedSearchFunction}) => {
 
     const [sideNavShown, setSideNavShown] = useState(false);
 
@@ -27,7 +28,7 @@ const Header = ({sideNavigationID = "side-navigation-menu", hamburgerIconInitial
             <img src="/images/frc-283-logo-app-icon.png" className={`logo-image ${showSearchBar ? "logo-text-with-search-bar" : ""}`}
                  alt="FRC Team 283's logo" />
             <h2 className="logo-text">FRC 283 Scouting Dashboard</h2>
-            {showSearchBar ? <SearchBar /> : "" }
+            {showSearchBar ? <SearchBar data={searchBarData} searchFunction={providedSearchFunction}  /> : "" }
             <div className="navigation-hamburger-icon">
                 {showMenuIcon ? <img src={hamburgerIconInitial} alt="Navigation hamburger icon"
                                  onClick={onNavMenuIconClicked} id="hamburger-icon" /> : ""}

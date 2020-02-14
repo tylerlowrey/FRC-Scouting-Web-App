@@ -18,4 +18,47 @@
   flex: 1 0 auto;
 }
 
+.error-message
+{
+  width: 350px;
+  max-width: 90%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+
+  animation-name: hide-message;
+  animation-duration: 5s;
+  animation-delay: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+
+  -webkit-animation-name: hide-message;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 3s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes hide-message {
+  from { visibility: visible; opacity: 1;}
+  to { visibility: hidden; opacity: 0; }
+}
+
+@-webkit-keyframes hide-message {
+  from { visibility: visible; opacity: 1;}
+  to { visibility: hidden; opacity: 0; }
+}
+
+
+.error-message p
+{
+  margin: 0 10px 0 0;
+}
+
+
 

@@ -14,6 +14,8 @@ public class ScoutingData
     private long timestamp;
     @Column(name = "team_key")
     private String teamKey;
+    @Column(name = "event_key")
+    private String eventKey;
     @Column(name = "photo_filename")
     private String photoFilename;
     @Column(name = "form_type")
@@ -23,10 +25,13 @@ public class ScoutingData
 
     public ScoutingData() {}
 
-    public ScoutingData(String username, long timestamp, String photoFilename, String formType, String formData)
+    public ScoutingData(String username, long timestamp, String teamKey, String eventKey,
+                        String photoFilename, String formType, String formData)
     {
         this.username = username;
         this.timestamp = timestamp;
+        this.teamKey = teamKey;
+        this.eventKey = eventKey;
         this.photoFilename = photoFilename;
         this.formType = formType;
         this.formData = formData;
@@ -60,6 +65,26 @@ public class ScoutingData
     public void setTimestamp(long timestamp)
     {
         this.timestamp = timestamp;
+    }
+
+    public String getTeamKey()
+    {
+        return teamKey;
+    }
+
+    public void setTeamKey(String teamKey)
+    {
+        this.teamKey = teamKey;
+    }
+
+    public String getEventKey()
+    {
+        return eventKey;
+    }
+
+    public void setEventKey(String eventKey)
+    {
+        this.eventKey = eventKey;
     }
 
     public String getPhotoFilename()

@@ -12,14 +12,13 @@ import org.springframework.security.core.Authentication;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 
 public class AuthenticationService
 {
     //86,400,000 is the number of milliseconds in a day
-    public static final long EXPIRATION_TIME = 86_400_000;
+    public static final long EXPIRATION_TIME = 1000;
     public static final String SIGNING_KEY = "c2VjcmV0"; //TODO: Move this
     public static final String PREFIX = "Bearer";
 
@@ -36,7 +35,7 @@ public class AuthenticationService
         response.addHeader("Access-Control-Expose-Headers", "Authorization");
     }
 
-    public static Authentication getAuthentication(HttpServletRequest request)
+    public static Authentication getAuthentication(HttpServletRequest request) throws ExpiredJwtException
     {
         String token = request.getHeader("Authorization");
         if(token != null)
@@ -49,6 +48,11 @@ public class AuthenticationService
                     .parseClaimsJws(token.replace(PREFIX, ""))
                     .getBody()
                     .getSubject();
+            }
+            catch (ExpiredJwtException e)
+            {
+                AuthenticationService.logger.info(request.getRemoteAddr() + " caused exception: " + e.toString());
+                throw new ExpiredJwtException(e.getHeader(), e.getClaims(), "JWT Token Expired");
             }
             catch (JwtException e)
             {

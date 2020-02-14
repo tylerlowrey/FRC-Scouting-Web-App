@@ -1,0 +1,22 @@
+.team-page-container
+{
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.team-page-info-card
+{
+    width: 30%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.team-page-robot-img
+{
+    width: 250px;
+    height: 250px;
+    border-radius: 12px;
+}

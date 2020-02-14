@@ -48,4 +48,6 @@ const Authentication = ({unauthenticatedRedirect = "/login", logout = false}) =>
     return <>{showRedirect ? <Redirect to={unauthenticatedRedirect} /> : ""}</>;
 };
 
+
+
 export default Authentication;

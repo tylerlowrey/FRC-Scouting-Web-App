@@ -8,7 +8,8 @@ const Footer = () => {
 
     return (
         <footer>
-            <p className="footer-text">Copyright &copy; {copyrightYear} FRC Team 283</p>
+            <p className="footer-text">Copyright &copy; {copyrightYear} FRC Team 283. Powered by&nbsp;
+                <a href="http://thebluealliance.com">The Blue Alliance</a></p>
         </footer>
     )
 };

@@ -3,23 +3,6 @@
     background-image: url("/images/login_background_tile.png");
 }
 
-.login-error-message
-{
-    width: 350px;
-    max-width: 90%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: 10px auto;
-    display: flex;
-    align-items: center;
-}
-.login-error-message p
-{
-    margin: 0 10px 0 0;
-}
-
 .login-page-transparent-bg-cover
 {
     width: 100%;

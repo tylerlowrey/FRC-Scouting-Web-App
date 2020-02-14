@@ -1,25 +1,22 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {SERVER_API_URL} from '../constants';
 import '../Styles/Pages/LoginPage.css';
 import Footer from "../Components/Footer";
 import {Redirect} from 'react-router-dom';
 import base64 from 'base-64';
 import axios from 'axios';
+import shortid from 'shortid';
 
 
-const LoginPage = () => {
+const LoginPage = ({ providedErrMsg = "" }) => {
 
     const [user, setUser] = useState({ username: "", password: ""});
     const [authenticated, setAuthenticated] = useState(localStorage.getItem("authenticated") === "true");
     const [errorMessage, setErrorMessage] = useState(<></>);
 
-    const handleInputChange = (event) => {
-        setUser({...user, [event.target.name] : event.target.value});
-    };
-
     const displayError = (message) => {
         setErrorMessage(
-            <div className="alert alert-danger login-error-message fade show">
+            <div className="alert alert-danger error-message fade show hide-message" key={shortid.generate()}>
                 <p>{message}</p>
                 <button type="button" className="close" aria-label="Close" id="login-error-close" onClick={hideError}>
                     <span aria-hidden="true">&times;</span>
@@ -30,6 +27,10 @@ const LoginPage = () => {
 
     const hideError = () => {
         setErrorMessage(<></>);
+    };
+
+    const handleInputChange = (event) => {
+        setUser({...user, [event.target.name] : event.target.value});
     };
 
     const login = (event) => {
@@ -52,18 +53,31 @@ const LoginPage = () => {
                     setAuthenticated(true);
                 }
             }).catch( error => {
-                if(error.response.status === 403)
+                if (error.response)
                 {
-                    displayError("Username or password was incorrect");
+                    if (error.response.status === 403)
+                    {
+                        displayError("Username or password was incorrect");
+                    }
+                    else
+                    {
+                        displayError("An error occurred while communicating with the server");
+                        console.log(error);
+                    }
                 }
                 else
                 {
-                    displayError("An error occurred while communicating with the server");
-                    console.log(error);
+                    displayError("Unable to communicate with the server");
                 }
 
             });
     };
+
+    useEffect(() => {
+        if(providedErrMsg && providedErrMsg !== "")
+            displayError(errorMessage);
+
+    }, []);
 
     if(authenticated)
     {
