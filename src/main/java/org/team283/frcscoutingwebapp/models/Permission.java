@@ -1,51 +1,28 @@
 package org.team283.frcscoutingwebapp.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
+
 import javax.persistence.*;
 
 @Entity(name = "permissions")
-public class Permission
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Permission implements GrantedAuthority
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "permission_id")
     private Long permissionID;
-    @Column(name = "permission_name")
+    private String authorityID;
     private String permissionName;
-    @Column(name = "permission_description")
     private String permissionDescription;
 
-    public Permission()
+    @Override
+    public String getAuthority()
     {
-
-    }
-
-    public Long getPermissionID()
-    {
-        return permissionID;
-    }
-
-    public void setPermissionID(Long permissionID)
-    {
-        this.permissionID = permissionID;
-    }
-
-    public String getPermissionName()
-    {
-        return permissionName;
-    }
-
-    public void setPermissionName(String permissionName)
-    {
-        this.permissionName = permissionName;
-    }
-
-    public String getPermissionDescription()
-    {
-        return permissionDescription;
-    }
-
-    public void setPermissionDescription(String permissionDescription)
-    {
-        this.permissionDescription = permissionDescription;
+        return authorityID;
     }
 }

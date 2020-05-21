@@ -1,14 +1,15 @@
 package org.team283.frcscoutingwebapp;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.team283.frcscoutingwebapp.storage.StorageProperties;
 
 @SpringBootApplication
-@EnableConfigurationProperties(StorageProperties.class)
 public class FrcScoutingWebApplication
 {
+	@Value("${spring.data.rest.base-path}")
+	public static String BASE_API_URL;
+
 	public static void main(String[] args)
 	{
 		SpringApplication.run(FrcScoutingWebApplication.class, args);

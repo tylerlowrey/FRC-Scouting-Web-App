@@ -1,9 +1,16 @@
 package org.team283.frcscoutingwebapp.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity(name = "roles")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Role
 {
     @Id
@@ -14,55 +21,6 @@ public class Role
     private String roleName;
     @Column(name = "role_description")
     private String roleDescription;
-
-    @ManyToMany
-    @JoinTable( name = "role_permissions",
-                joinColumns = @JoinColumn(name = "role_id"),
-                inverseJoinColumns = @JoinColumn(name = "permission_id"))
+    @OneToMany
     private List<Permission> permissions;
-
-    public Role()
-    {
-
-    }
-
-    public Long getRoleID()
-    {
-        return roleID;
-    }
-
-    public void setRoleID(Long roleID)
-    {
-        this.roleID = roleID;
-    }
-
-    public String getRoleName()
-    {
-        return roleName;
-    }
-
-    public void setRoleName(String roleName)
-    {
-        this.roleName = roleName;
-    }
-
-    public String getRoleDescription()
-    {
-        return roleDescription;
-    }
-
-    public void setRoleDescription(String roleDescription)
-    {
-        this.roleDescription = roleDescription;
-    }
-
-    public List<Permission> getPermissions()
-    {
-        return permissions;
-    }
-
-    public void setPermissions(List<Permission> permissions)
-    {
-        this.permissions = permissions;
-    }
 }
