@@ -6,17 +6,18 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Entity(name = "frc_teams")
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class FRCTeam
+public class Team
 {
     @Id
-    private Integer teamNumber;
-    private String teamName;
-    private String teamLocation;
-    private String teamKey;
+    private Integer number;
+    private String name;
+    private String location;
+    // The external key assigned to the team by FIRST
+    private String externalKey;
 
 }
 

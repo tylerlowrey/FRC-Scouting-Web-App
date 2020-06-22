@@ -3,8 +3,6 @@ package org.team283.frcscoutingwebapp.models;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Type;
-import org.hibernate.annotations.TypeDef;
 
 import javax.persistence.*;
 
@@ -18,11 +16,10 @@ public class MatchScoutingRecord
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long recordID;
     @ManyToOne
-    private FRCTeam teamNumber;
+    private Team teamNumber;
     @ManyToOne
     private RoboticsEvent event;
     private Short matchNumber;
-    @Type(type = "json")
     @Column(name = "form_data", columnDefinition = "json")
     private String formData;
 
