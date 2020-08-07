@@ -1,12 +1,15 @@
 import React from 'react';
 import globalStyles from '../../App.css';
-import homeStyles from './home.module.css';
+import localStyles from './home.module.css';
 import cx from 'classnames';
+import Header from "../Header";
+import LoginForm from "../LoginForm";
 
 const Home = () => {
     return (
-        <div className={ cx(homeStyles.homeContainer, globalStyles.mainContainer)}>
-            <p>Hello World</p>
+        <div className={ cx(localStyles.container, globalStyles.mainContainer)}>
+            <Header />
+            <LoginForm />
         </div>
     );
 };
