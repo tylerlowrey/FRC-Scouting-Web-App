@@ -1,0 +1,19 @@
+.container {
+    background: #8a0108;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container h2 {
+    color: #FFF;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0 0 2px 10px;
+}
+
+.logoContainer {
+    display: flex;
+}
