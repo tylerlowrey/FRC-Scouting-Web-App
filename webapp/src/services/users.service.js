@@ -13,6 +13,6 @@ function logout() {
 }
 
 function register(username, password) {
-    
+
 }
 
