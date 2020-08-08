@@ -7,7 +7,7 @@ export const userActions = {
 }
 
 function login(username, password) {
-    dispatch({ type: userConstants.LOGIN_REQUEST, username, password })
+    return { type: userConstants.LOGIN_REQUEST, username }
 }
 
 function logout() {

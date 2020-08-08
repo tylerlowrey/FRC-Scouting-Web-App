@@ -1,13 +1,17 @@
 import React from 'react'
 import localStyles from './loginForm.module.css';
 import {useForm} from "react-hook-form";
+import {userActions} from "../../actions/user.action";
+import {useDispatch, useSelector} from "react-redux";
 
 const LoginForm = () => {
 
     const { register, handleSubmit, watch, errors} = useForm();
+    const dispatch = useDispatch();
+    const username = useSelector(state => state.user.username);
 
     const onSubmit = (data) => {
-        console.log(data);
+        dispatch(userActions.login(data.username, data.password));
     }
 
     return (
