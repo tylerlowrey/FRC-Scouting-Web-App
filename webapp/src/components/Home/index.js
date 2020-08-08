@@ -7,9 +7,11 @@ import LoginForm from "../LoginForm";
 
 const Home = () => {
     return (
-        <div className={ cx(localStyles.container, globalStyles.mainContainer)}>
-            <Header />
-            <LoginForm />
+        <div className={localStyles.containerBackground}>
+            <div className={cx(localStyles.container, globalStyles.mainContainer)}>
+                <Header/>
+                <LoginForm/>
+            </div>
         </div>
     );
 };
