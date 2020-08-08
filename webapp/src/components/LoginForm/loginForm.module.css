@@ -11,6 +11,7 @@
     flex-direction: column;
     padding: 50px 50px;
     background: #FFF;
+    max-width: 98%;
 }
 
 .loginFormTitle {
@@ -34,7 +35,7 @@
 /* Select all input elements except the submit button */
 .loginForm input:not([type="submit"]) {
     display: block;
-    width: 350px;
+    max-width: 350px;
     padding: 10px;
     background: #e3e3e3;
     border: 1px solid #CCC;
