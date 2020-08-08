@@ -12,13 +12,13 @@ const LoginForm = () => {
     return (
         <div className={localStyles.container}>
             <div className={localStyles.loginForm}>
-                <p className={localStyles.loginFormTitle}>Login</p>
+                <p className={localStyles.loginFormTitle}>Sign In</p>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <label htmlFor="username">Email</label>
                     <input name="username" type="text" ref={register({ required: true})}/>
                     <label htmlFor="password">Password</label>
                     <input name="password" type="password" ref={register({ required: true})}/>
-                    <input type="submit" className={localStyles.loginButton} value="Login" />
+                    <input type="submit" className={localStyles.loginButton} value="Log In" />
                 </form>
             </div>
         </div>
