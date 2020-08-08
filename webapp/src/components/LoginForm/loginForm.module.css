@@ -9,16 +9,15 @@
     margin-top: -40px;
     display: flex;
     flex-direction: column;
-    padding: 20px 15px;
+    padding: 50px 50px;
     background: #FFF;
-    border-radius: 5px;
 }
 
 .loginFormTitle {
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1.6em;
     font-weight: bold;
-    margin: 0 0 10px 0;
+    margin: 0 0 30px 0;
 }
 
 .loginForm form {
@@ -35,23 +34,28 @@
 /* Select all input elements except the submit button */
 .loginForm input:not([type="submit"]) {
     display: block;
-    width: 400px;
+    width: 350px;
     padding: 10px;
-    background: #d2d4d8;
+    background: #e3e3e3;
     border: 1px solid #CCC;
     border-radius: 2px;
-    font-size: 1.6em;
-    margin-bottom: 15px;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+.loginForm input:not([type="submit"]):focus {
+    outline: solid 1px #8a0108;
+    border-radius: 2px;
 }
 
 .loginButton {
     font-size: 1.6em;
     color: #FFF;
     padding: 10px 30px;
-    margin: 20px auto;
+    margin: 30px auto;
     background: #8a0108;
     border: none;
-    border-radius: 2px;
+    border-radius: 4px;
     align-self: center;
     outline: none;
 }
