@@ -3,6 +3,7 @@ import {Routes, Route} from 'react-router-dom';
 import './App.css';
 import HomePage from './components/HomePage';
 import AccountPage from "./components/AccountPage";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
     let [backgroundColor, setBackgroundColor] = useState("#FFF");
