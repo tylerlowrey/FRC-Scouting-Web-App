@@ -5,7 +5,7 @@ export function user(state = {}, action) {
         case userConstants.LOGIN_REQUEST:
             return {...state, username: action.username };
         case userConstants.LOGIN_SUCCESS:
-            return {...state, user: action.user };
+            return {...state, data: action.data };
         case userConstants.LOGIN_FAILURE:
             return state;
         default:

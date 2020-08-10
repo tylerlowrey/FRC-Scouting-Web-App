@@ -1,9 +1,10 @@
 import React from 'react';
 import localStyles from './header.module.css';
+import classNames from 'classnames';
 
-const Header = () => {
+const Header = ({ navigationLinks = [], backgroundClass = localStyles.primaryBackground }) => {
   return(
-    <div className={localStyles.container}>
+    <div className={classNames(localStyles.container, backgroundClass)}>
         <div className={localStyles.logoContainer} >
             <img src="/images/logo.png" />
         </div>

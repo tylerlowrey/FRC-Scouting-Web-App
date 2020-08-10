@@ -11,15 +11,13 @@ const LoginForm = () => {
     const dispatch = useDispatch();
     const user = useSelector(state => state.user.data);
 
-    console.log(user);
-
     const onSubmit = (data) => {
         dispatch(userActions.login(data.username, data.password));
     }
 
     return (
         <>
-            {user && <Navigate to="/accounts" replace={true} /> }
+            {user && <Navigate to="/account" replace={true} /> }
             <div className={localStyles.container}>
                 <div className={localStyles.loginForm}>
                     <p className={localStyles.loginFormTitle}>Sign In</p>
