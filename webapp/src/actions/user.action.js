@@ -18,7 +18,7 @@ function login(username, password) {
                 name : "Tyler Lowrey",
                 teamNumber : 283
             };
-            dispatch({ type: userConstants.LOGIN_SUCCESS, user: loggedInUser });
+            dispatch({ type: userConstants.LOGIN_SUCCESS, data: loggedInUser });
         }).catch(error => {
             console.log(error);
             dispatch({ type: userConstants.LOGIN_FAILURE })
