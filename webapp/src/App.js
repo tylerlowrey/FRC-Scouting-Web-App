@@ -10,9 +10,10 @@ function App() {
 
     return (
         <div className="App" style={{background: backgroundColor}}>
-            <Routes>
-                <Route exact path="/account" element={<AccountPage />} />
-                <Route path="/:any" element={<HomePage/>}/>
+            <Routes >
+                <Route exact path="account" element={<AccountPage />} />
+                <Route path="" element={<HomePage/>} />
+                <Route path="/:any" element={<HomePage/>} />
             </Routes>
         </div>
     );
