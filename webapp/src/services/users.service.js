@@ -1,3 +1,6 @@
+import { BACKEND_API_URL } from "../constants";
+import axios from 'axios';
+
 export const usersService = {
     login,
     logout,
@@ -5,7 +8,10 @@ export const usersService = {
 };
 
 function login(username, password) {
-
+    return axios.post(`${BACKEND_API_URL}/login`, {
+        username,
+        password,
+    });
 }
 
 function logout() {

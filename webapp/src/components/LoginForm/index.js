@@ -8,7 +8,7 @@ const LoginForm = () => {
 
     const { register, handleSubmit, watch, errors} = useForm();
     const dispatch = useDispatch();
-    const username = useSelector(state => state.user.username);
+    const user = useSelector(state => state.user);
 
     const onSubmit = (data) => {
         dispatch(userActions.login(data.username, data.password));
