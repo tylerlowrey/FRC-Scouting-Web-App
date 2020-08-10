@@ -19,7 +19,6 @@ function login(username, password) {
                 teamNumber : 283
             };
             dispatch({ type: userConstants.LOGIN_SUCCESS, user: loggedInUser });
-            history.push("/account");
         }).catch(error => {
             console.log(error);
             dispatch({ type: userConstants.LOGIN_FAILURE })
