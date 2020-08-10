@@ -15,6 +15,7 @@ function login(username, password) {
             console.log(response);
             let loggedInUser = {
                 id : 1,
+                username: "accounts@tylerlowrey.com",
                 name : "Tyler Lowrey",
                 teamNumber : 283
             };

@@ -1,3 +1,9 @@
 .container {
 
 }
+
+.contentContainer {
+    padding: 50px 10px;
+    display: flex;
+    flex-direction: column;
+}

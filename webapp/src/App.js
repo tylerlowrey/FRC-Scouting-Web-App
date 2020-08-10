@@ -5,7 +5,7 @@ import HomePage from './components/HomePage';
 import AccountPage from "./components/AccountPage";
 
 function App() {
-    let [backgroundColor, setBackgroundColor] = useState("#EEE");
+    let [backgroundColor, setBackgroundColor] = useState("#FFF");
 
     return (
         <div className="App" style={{background: backgroundColor}}>
