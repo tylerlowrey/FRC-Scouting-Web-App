@@ -14,7 +14,7 @@ const AccountPage = () => {
         <HeaderNavigationItem text="Logout"
                               onClickAction={() => navigate("/logout")} />
 
-    ]
+    ];
 
     return (
         <>
@@ -28,8 +28,7 @@ const AccountPage = () => {
                 </div>
             </div>
         </>
-
-    )
+    );
 }
 
 export default AccountPage

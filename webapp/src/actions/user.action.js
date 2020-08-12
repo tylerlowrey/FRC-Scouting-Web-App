@@ -13,12 +13,7 @@ function login(username, password) {
 
         usersService.login(username, password).then(response => {
             console.log(response);
-            let loggedInUser = {
-                id : 1,
-                username: "accounts@tylerlowrey.com",
-                name : "Tyler Lowrey",
-                teamNumber : 283
-            };
+            let loggedInUser = usersService.getUser(response.data.id);
             dispatch({ type: userConstants.LOGIN_SUCCESS, data: loggedInUser });
         }).catch(error => {
             console.log(error);
@@ -29,12 +24,10 @@ function login(username, password) {
 }
 
 function logout() {
-
+    usersService.logout();
+    return { type: userConstants.LOGOUT };
 }
 
 function register(username, password) {
 
-}
-
-function getUser(username) {
 }

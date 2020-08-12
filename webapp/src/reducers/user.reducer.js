@@ -8,6 +8,8 @@ export function user(state = {}, action) {
             return {...state, data: action.data };
         case userConstants.LOGIN_FAILURE:
             return state;
+        case userConstants.LOGOUT:
+            return {...state, data: undefined}
         default:
             return state;
     }
