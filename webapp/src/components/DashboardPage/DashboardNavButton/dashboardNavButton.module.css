@@ -1,0 +1,18 @@
+.container {
+    background: #CCC;
+    border: 1px solid #d2d4d8;
+    box-shadow: 0px 0px 2px 0px #000;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.container:hover {
+    background: #d2d4d8;
+    cursor: pointer;
+}
+
+.container p {
+    margin: 0;
+}

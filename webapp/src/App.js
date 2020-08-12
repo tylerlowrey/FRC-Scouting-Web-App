@@ -5,15 +5,17 @@ import HomePage from './components/HomePage';
 import AccountPage from "./components/AccountPage";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LogoutPage from "./components/LogoutPage";
+import DashboardPage from "./components/DashboardPage";
 
 function App() {
     let [backgroundColor, setBackgroundColor] = useState("#FFF");
 
     return (
         <div className="App" style={{background: backgroundColor}}>
-            <Routes >
+            <Routes>
                 <Route exact path="account" element={<AccountPage />} />
                 <Route exact path="logout" element={<LogoutPage />} />
+                <Route exact path="dashboard" element={<DashboardPage />} />
                 <Route path="" element={<HomePage/>} />
                 <Route path="/:any" element={<HomePage/>} />
             </Routes>

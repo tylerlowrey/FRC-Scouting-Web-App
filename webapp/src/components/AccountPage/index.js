@@ -11,6 +11,8 @@ const AccountPage = () => {
     let navigate = useNavigate();
 
     const headerNavItems = [
+        <HeaderNavigationItem text="Dashboard"
+                              onClickAction={() => navigate("/dashboard")} />,
         <HeaderNavigationItem text="Logout"
                               onClickAction={() => navigate("/logout")} />
 

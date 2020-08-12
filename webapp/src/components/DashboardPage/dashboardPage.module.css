@@ -1,0 +1,22 @@
+.container {
+
+}
+
+.contentContainer {
+    padding: 10px;
+}
+
+.navContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navContainer > * {
+    margin: 5px;
+}
+
+.modulesContainer {
+    display: flex;
+    flex-direction: row;
+}

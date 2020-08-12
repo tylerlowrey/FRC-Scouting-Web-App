@@ -17,7 +17,7 @@ const LoginForm = () => {
 
     return (
         <>
-            {user && <Navigate to="/account" replace={true} /> }
+            {user && <Navigate to="/dashboard" replace={true} /> }
             <div className={localStyles.container}>
                 <div className={localStyles.loginForm}>
                     <p className={localStyles.loginFormTitle}>Sign In</p>
