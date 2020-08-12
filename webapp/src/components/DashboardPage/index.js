@@ -30,6 +30,7 @@ const DashboardPage = () => {
                         <DashboardNavButton name="Match Scouting" />
                     </div>
                     <div className={localStyles.modulesContainer}>
+
                     </div>
                 </div>
             </div>
