@@ -1,22 +1,30 @@
 .container {
     height: 60px;
-    padding: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 }
 
 .primaryBackground {
     background: #8a0108;
 }
 
-.container h2 {
+.logoContainer {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.logoTagline {
     color: #FFF;
     font-size: 1.4em;
     font-weight: bold;
     margin: 0 0 2px 10px;
 }
 
-.logoContainer {
+.navContainer {
     display: flex;
+    flex-direction: row;
+    height: 100%;
 }
