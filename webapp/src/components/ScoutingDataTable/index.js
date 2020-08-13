@@ -1,6 +1,7 @@
 import React from 'react';
 import localStyles from './scoutingDataTable.module.css';
 import {useTable} from "react-table/src/hooks/useTable";
+import classNames from 'classnames';
 
 /**
  * Produces a table used to display provided scouting data

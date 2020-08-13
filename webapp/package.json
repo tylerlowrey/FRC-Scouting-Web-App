@@ -22,10 +22,10 @@
     "redux": "^4.0.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "transpileReactTable": "babel --plugins @babel/transform-react-jsx node_modules/react-table --out-dir node_modules/react-table --copy-files"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,5 +41,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/plugin-transform-react-jsx": "^7.10.4"
   }
 }
