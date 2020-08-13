@@ -1,6 +1,16 @@
 import { userConstants } from "../constants";
 
-export function user(state = {}, action) {
+//TODO: Set this to empty for production/refactor this to only be used during testing
+const defaultUserState = {
+    data: {
+        id: 1,
+        username: "accounts@tylerlowrey.com",
+        name: "Tyler Lowrey",
+        teamNumber: 283,
+    }
+};
+
+export function user(state = defaultUserState, action) {
     switch(action.type) {
         case userConstants.LOGIN_REQUEST:
             return {...state, username: action.username };
