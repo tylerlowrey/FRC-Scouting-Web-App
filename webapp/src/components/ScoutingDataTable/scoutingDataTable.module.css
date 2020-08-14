@@ -1,3 +1,15 @@
 .container {
+    border: 1px solid #d2d4d8;
+    box-shadow: 0px 0px 2px 0px #000;
+    overflow: scroll;
+}
 
+.scoutingDataTable {
+    margin: 0;
+    border-top: none;
+    overflow: auto;
+}
+
+.scoutingDataTable thead tr th {
+    white-space: nowrap;
 }

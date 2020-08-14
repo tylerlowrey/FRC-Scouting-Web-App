@@ -1,7 +1,6 @@
 import React from 'react';
 import localStyles from './header.module.css';
 import classNames from 'classnames';
-import HeaderNavigationItem from "./HeaderNavigationItem";
 import {APP_NAME} from "../../constants";
 
 /**
