@@ -1,4 +1,4 @@
 include 'user-service'
-include 'scouting-service'
 include 'team-service'
+include 'scouting-data-service'
 
